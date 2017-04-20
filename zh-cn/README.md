@@ -90,17 +90,17 @@
 |channel|渠道|varchar(10)|Y|激活时必填，非激活时选填，wechat/alipay|
 |id|渠道标识|varchar(32)|Y||
 |storeId|门店标识|varchar(32)|Y|激活时必填，非激活选填|
-|name|昵称|varchar(20)|Y|
+|name|昵称|varchar(20)|Y||
 |birthday|生日|varchar(10)|Y|1977-04-18|
 |mobile|手机号|varchar(13)|Y||
-|email|邮箱|varchar(40)|N|
+|email|邮箱|varchar(40)|N||
 |gender|性别|Integer(1)|N|1：男性，2：女性，0：未知|
-|headImg|头像图片地址|varchar(200)|N|
-|country|国家|varchar(20)|N|
-|province|省份|varchar(20)|N|
-|city|城市|varchar(20)|N|
-|address|地址|varchar(200)|N|
-|industry|行业|varchar(40)|N|
+|headImg|头像图片地址|varchar(200)|N||
+|country|国家|varchar(20)|N||
+|province|省份|varchar(20)|N||
+|city|城市|varchar(20)|N||
+|address|地址|varchar(200)|N||
+|industry|行业|varchar(40)|N||
 |memberId|已入驻会员编号|varchar(40)|N|商户可根据此老会员编号和手机号校验用户是否为已入驻用户|
 
 
@@ -169,29 +169,29 @@ SUCCESS
 
 |名称|含义|类型|必填|备注|
 |----|:---|:---|:--:|--------|
-|code|消息码|varchar(6)Y|||
+|code|消息码|varchar(6)|Y||
 |message|消息|varchar(60)|N||
-|data|业务实体|{}||
+|data|业务实体|{}|Y||
 | - id|渠道标识|varchar(32)|Y||
 | - storeId|门店标识|varchar(32)|Y|激活时必填，非激活选填|
-| - name|昵称|varchar(20)|Y|
+| - name|昵称|varchar(20)|Y||
 | - birthday|生日|varchar(10)|Y|1977-04-18|
 | - mobile|手机号|varchar(13)|Y||
-| - email|邮箱|varchar(40)|N|
+| - email|邮箱|varchar(40)|N||
 | - gender|性别|Integer(1)|N|1：男性，2：女性，0：未知|
-| - headImg|头像图片地址|varchar(200)|N|
-| - country|国家|varchar(20)|N|
-| - province|省份|varchar(20)|N|
-| - city|城市|varchar(20)|N|
-| - address|地址|varchar(200)|N|
-| - industry|行业|varchar(40)|N|
+| - headImg|头像图片地址|varchar(200)|N||
+| - country|国家|varchar(20)|N||
+| - province|省份|varchar(20)|N||
+| - city|城市|varchar(20)|N||
+| - address|地址|varchar(200)|N||
+| - industry|行业|varchar(40)|N||
 | - card|会员卡信息|[{}]|Y||
 | -  - no|会员编号|varchar(12)|Y||
 | -  - score|会员积分|bigint|Y||
-| -  - level|会员等级|varchar(10)|Y|||
-| -  - expire|有效期|varchar(10)|Y|||
+| -  - level|会员等级|varchar(10)|Y||
+| -  - expire|有效期|varchar(10)|Y||
 | -  - phone|联系方式|varchar(20)|N||
-| -  - rights|权益|[]|N|
+| -  - rights|权益|[]|N||
 | -  - instructions|使用须知|[]|N||
 
 
