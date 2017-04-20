@@ -2,9 +2,10 @@
 ##1.Introduction
 This document is used to illustrate how to connect the E-member system and get data of member.
  > * Step 1: Contact ShouQianBa-Stanley(13917862326) for technical support.
- > * Step 2: Apply for appid from ShouQianBa. Provide the key to the Shouqianba. The secret is valid for one month. So you should update the secret periodically. (to chapter 2.1)
- > * Step 3: Develop a function to receive information of member. (to chapter 3)
- > * Step 4: Develop a function to query information of member. (to chapter 4)
+ > * Step 2: The seller must to prepare a secret and use this secret to apply for appid from ShouQianBa. The secret is valid for one month. So seller should develop a function to update the secret. (to chapter 2.1)
+ > * Step 3: Develop a function to update the secret. (to chapter 2.1)
+ > * Step 4: Develop a function to receive information of member. (to chapter 3)
+ > * Step 5: Develop a function to query information of member. (to chapter 4)
 
 
 ##1.1 The process of business interaction
@@ -12,10 +13,10 @@ This document is used to illustrate how to connect the E-member system and get d
 ![image](https://raw.githubusercontent.com/18667163872/e-member-doc/master/img/seq-en.png)
 
 ##2.Signature verification
-In the Internet environment, use the interfaces you should do signature verification.
+In the Internet environment, the seller must to use HTTPS protocol communication and should do signature verification about parameter.
 
 ###2.1 Update secret
-    Apply for appid from ShouQianBa. The secret is valid for one month. So you should update the secret periodically.
+    The seller should provide a secret to ShouQianBa and update the secret periodically. The ShouQianBa can use seller’s function to update the secret. The secret is valid for one month.
  - api url:https://member.hm.com/api/sign/v1
  - request type: post
  - parameters:
@@ -89,17 +90,17 @@ Step 4: using MD5 to get a signature, and make the signature combined with capit
 |channel|channel|varchar(10)|Y|activate  member must fill in, otherwise not. wechat/alipay|
 |id|channel identification|varchar(32)|Y||
 |storeId|store identification|varchar(32)|Y|activate  member must fill in, otherwise not|
-|name|nickname|varchar(20)|Y|
+|name|nickname|varchar(20)|Y||
 |birthday|birthday|varchar(10)|Y|1977-04-18|
 |mobile|cell-phone number|varchar(13)|Y||
-|email|email|varchar(40)|N|
+|email|email|varchar(40)|N||
 |gender|gender|Integer(1)|N|1:male/2:female/0:unknown|
-|headImg|path of picture|varchar(200)|N|
-|country|country|varchar(20)|N|
-|province|province|varchar(20)|N|
-|city|city|varchar(20)|N|
-|address|address|varchar(200)|N|
-|industry|industry|varchar(40)|N|
+|headImg|path of picture|varchar(200)|N||
+|country|country|varchar(20)|N||
+|province|province|varchar(20)|N||
+|city|city|varchar(20)|N||
+|address|address|varchar(200)|N||
+|industry|industry|varchar(40)|N||
 |memberId|member id|varchar(40)|N|Merchant can know customer have or not the membership according to customer’s old member id and cell-phone number.|
 
 
@@ -171,24 +172,24 @@ SUCCESS
 |data|service entity|{}||
 | - id|channel identification|varchar(32)|Y||
 | - storeId|store identification|varchar(32)|Y|activate  member must fill in, otherwise not|
-| - name|nickname|varchar(20)|Y|
+| - name|nickname|varchar(20)|Y||
 | - birthday|birthday|varchar(10)|Y|1977-04-18|
 | - mobile|cell-phone number|varchar(13)|Y||
-| - email|email|varchar(40)|N|
+| - email|email|varchar(40)|N||
 | - gender|gender|Integer(1)|N|1:male/2:female/0:unknown|
-| - headImg|path of picture|varchar(200)|N|
-| - country|country|varchar(20)|N|
-| - province|province|varchar(20)|N|
-| - city|city|varchar(20)|N|
-| - address|address|varchar(200)|N|
-| - industry|industry|varchar(40)|N|
+| - headImg|path of picture|varchar(200)|N||
+| - country|country|varchar(20)|N||
+| - province|province|varchar(20)|N||
+| - city|city|varchar(20)|N||
+| - address|address|varchar(200)|N||
+| - industry|industry|varchar(40)|N||
 | - card|card information|[{}]|Y||
 | -  - no|card number|varchar(12)|Y||
 | -  - score|card points|bigint|Y||
-| -  - level|card grade|varchar(10)|Y|||
-| -  - expire|the useful-life of card|varchar(10)|Y|||
+| -  - level|card grade|varchar(10)|Y||
+| -  - expire|the useful-life of card|varchar(10)|Y||
 | -  - phone|phone|varchar(20)|N||
-| -  - rights|rights|[]|N|
+| -  - rights|rights|[]|N||
 | -  - instructions|instructions|[]|N||
 
 
