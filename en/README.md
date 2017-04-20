@@ -151,7 +151,7 @@ SUCCESS
 |name|meaning|type|required|desc|
 |----|:---|:---|:--:|--------|
 |sign|MD5 signature|varchar(128)|Y|to chapter 2.2|
-|id|channel identification|varchar(32)|Y||
+|id|channel identification|varchar(32)|Y|||
 
 
  - example:
@@ -165,6 +165,7 @@ SUCCESS
 
 
  - return parameters:
+
 |name|meaning|type|required|desc|
 |----|:---|:---|:--:|--------|
 |code|response code|varchar(6)Y|||
@@ -190,7 +191,7 @@ SUCCESS
 | -  - expire|the useful-life of card|varchar(10)|Y||
 | -  - phone|phone|varchar(20)|N||
 | -  - rights|rights|[]|N||
-| -  - instructions|instructions|[]|N||
+| -  - instructions|instructions|[]|N|||
 
 
  - example:
