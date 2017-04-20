@@ -152,7 +152,7 @@ SUCCESS
 |名称|含义|类型|必填|备注|
 |----|:---|:---|:--:|--------|
 |sign|参数签名|varchar(128)|Y|详见2.2.如何构造签名|
-|id|渠道标识|varchar(32)|Y||
+|id|渠道标识|varchar(32)|Y|||
 
 
  - 参数示例：
@@ -192,7 +192,7 @@ SUCCESS
 | -  - expire|有效期|varchar(10)|Y||
 | -  - phone|联系方式|varchar(20)|N||
 | -  - rights|权益|[]|N||
-| -  - instructions|使用须知|[]|N||
+| -  - instructions|使用须知|[]|N|||
 
 
  - 返回示例：
