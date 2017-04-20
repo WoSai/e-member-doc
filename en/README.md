@@ -177,7 +177,7 @@ SUCCESS
 | - birthday|birthday|varchar(10)|Y|1977-04-18|
 | - mobile|cell-phone number|varchar(13)|Y||
 | - email|email|varchar(40)|N||
-| - gender|gender|Integer(1)|N|1:male/2:female/0:unknown|
+| - gender|gender|Integer(1)|N|1：male/2：female/0：unknown|
 | - headImg|path of picture|varchar(200)|N||
 | - country|country|varchar(20)|N||
 | - province|province|varchar(20)|N||
