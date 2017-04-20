@@ -168,7 +168,7 @@ SUCCESS
 
 |name|meaning|type|required|desc|
 |----|:---|:---|:--:|--------|
-|code|response code|varchar(6)Y|||
+|code|response code|varchar(6)|Y||
 |message|response message|varchar(60)|N||
 |data|service entity|{}||
 | - id|channel identification|varchar(32)|Y||
