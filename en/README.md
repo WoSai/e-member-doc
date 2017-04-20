@@ -9,7 +9,7 @@ This document is used to illustrate how to connect the E-member system and get d
 
 ##1.1 The process of business interaction
 
-![image](https://github.com/18667163872/e-member-doc/blob/master/img/seq-en.png)
+![image](https://raw.githubusercontent.com/18667163872/e-member-doc/master/img/seq-en.png)
 
 ##2.Signature verification
 In the Internet environment, use the interfaces you should do signature verification.
