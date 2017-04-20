@@ -8,22 +8,8 @@ This document is used to illustrate how to connect the E-member system and get d
 
 
 ##1.1 The process of business interaction
-```seq
-Title:The Sequence Diagram of scan QR code to get membership
-Customer->Channel(Wechat/Alipay):Scan QR code
-Channel(Wechat/Alipay)->Customer:Display page of apply for membership
-Customer->Channel(Wechat/Alipay):Fill in the form
-Channel(Wechat/Alipay)->ISV(ShouQianBa):Send an apply for membership request
-ISV(ShouQianBa)-->Merchant:Send an asynchronous request of member registration(function3)
-ISV(ShouQianBa)->Channel(Wechat/Alipay):Return response
-Channel(Wechat/Alipay)->Customer:Display the membership card
-Customer->Channel(Wechat/Alipay):Query base information of member
-Channel(Wechat/Alipay)->Customer:Display base information of member
-Customer->ISV(ShouQianBa):Query member points/grade/special offers
-ISV(ShouQianBa)->Merchant:Send a request to get information of member
-Merchant->ISV(ShouQianBa):Return the information
-ISV(ShouQianBa)->Customer:Display member points/grade/special offers
-```
+
+![image](https://github.com/18667163872/e-member-doc/tree/master/en/seq-en.png)
 
 ##2.Signature verification
 In the Internet environment, use the interfaces you should do signature verification.
