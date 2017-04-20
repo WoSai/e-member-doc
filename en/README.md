@@ -2,7 +2,7 @@
 ##1.Introduction
 This document is used to illustrate how to connect the E-member system and get data of member.
  > * Step 1: Contact ShouQianBa-Stanley(13917862326) for technical support.
- > * Step 2: Apply for appid and secret from ShouQianBa. The secret is valid for one month. So you should update the secret periodically. (to chapter 2.1)
+ > * Step 2: Apply for appid from ShouQianBa. Provide the key to the Shouqianba. The secret is valid for one month. So you should update the secret periodically. (to chapter 2.1)
  > * Step 3: Develop a function to receive information of member. (to chapter 3)
  > * Step 4: Develop a function to query information of member. (to chapter 4)
 
@@ -15,8 +15,8 @@ This document is used to illustrate how to connect the E-member system and get d
 In the Internet environment, use the interfaces you should do signature verification.
 
 ###2.1 Update secret
-    Apply for appid and secret from ShouQianBa. The secret is valid for one month. So you should update the secret periodically.
- - api url:https://m.wosai.cn/api/sign/v2
+    Apply for appid from ShouQianBa. The secret is valid for one month. So you should update the secret periodically.
+ - api url:https://member.hm.com/api/sign/v1
  - request type: post
  - parameters:
 
@@ -76,6 +76,7 @@ Step 4: using MD5 to get a signature, and make the signature combined with capit
 ##3.Send information of membership card
     Customers get/activate/update their information, E-Member will keep sending this information to seller and the frequency of send information is real-time/2min/10min/1hour/6hours/12hours/24hours until get the response "SUCCESS" from seller.
 
+ - api url: https://member.hm.com/api/member/notify/v1
  - request type: post
  - parameters format: json
  - parameters:
@@ -141,7 +142,7 @@ SUCCESS
 ##4.Get information of membership card according to card identification
     Customers can get their base information in the page of membership card. And can get all information from this function of seller’s development. The information such as member points, grade, special offers.
 
-
+ - api url: https://member.hm.com/api/member/query/v1
  - request type: post
  - parameters format: json
  - parameters:
