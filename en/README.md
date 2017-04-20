@@ -10,7 +10,7 @@ This document is used to illustrate how to connect the E-member system and get d
 
 ##1.1 The process of business interaction
 
-![image](https://raw.githubusercontent.com/18667163872/e-member-doc/master/img/seq-en.png)
+![image](https://raw.githubusercontent.com/WoSai/e-member-doc/master/img/seq-en.png)
 
 ##2.Signature verification
 In the Internet environment, the seller must to use HTTPS protocol communication and should do signature verification about parameter.

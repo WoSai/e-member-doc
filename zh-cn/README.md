@@ -10,7 +10,7 @@
 
 ##1.1 业务交互流程
 
-![image](https://raw.githubusercontent.com/18667163872/e-member-doc/master/img/seq-cn.png)
+![image](https://raw.githubusercontent.com/WoSai/e-member-doc/master/img/seq-cn.png)
 
 ##2.签名说明
 为保障数据安全，建议商户对暴露在互联网环境的接口的调用应当采用https协议通信，并对参数进行签名和验签。
