@@ -1,10 +1,3 @@
-﻿# Electronic Member (E-Member)
-
-标签（空格分隔）： E-Member
-
----
-
-[TOC]
 
 ##1.Introduction
 This document is used to illustrate how to connect the E-member system and get data of member.
