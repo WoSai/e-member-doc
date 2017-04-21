@@ -51,7 +51,7 @@ The Sequence will be designed into two parts,
 
 ![image](https://raw.githubusercontent.com/WoSai/e-member-doc/master/img/seq-en-two.png)
 
-## 1.2 Webproxy struture diagram
+## 1.2 Network Architecture
 
 ![struture](https://raw.githubusercontent.com/Wosai/e-member-doc/master/img/struture.png)
 
