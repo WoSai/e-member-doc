@@ -39,26 +39,9 @@ To help H&M launch service as smoothly and efficiently as possible, Shouqianba w
 
 
 ##1.1 The process of business interaction
-```seq
-Title:The Sequence Diagram of scan QR code to get membership
-Customer->Channel(Wechat/Alipay):Scan QR code
-Channel(Wechat/Alipay)->Customer:Display page of apply for membership
-Customer->Channel(Wechat/Alipay):Fill in the form
-Channel(Wechat/Alipay)->ISV(ShouQianBa):Send an apply for membership request
-ISV(ShouQianBa)-->WebProxy(Merchant):Send an asynchronous request of member registration
-WebProxy(Merchant)-->CRM(Merchant):Send an asynchronous request of member registration(function3)
-CRM(Merchant)-->WebProxy(Merchant):return invormation
-ISV(ShouQianBa)->Channel(Wechat/Alipay):Return response
-Channel(Wechat/Alipay)->Customer:Display the membership card
-Customer->Channel(Wechat/Alipay):Query base information of member
-Channel(Wechat/Alipay)->Customer:Display base information of member
-Customer->ISV(ShouQianBa):Query member points/grade/special offers
-ISV(ShouQianBa)->WebProxy(Merchant):Send a request to get information of member
-WebProxy(Merchant)->CRM(Merchant):Send a request to get information of member(function4)
-CRM(Merchant)->WebProxy(Merchant):Return the information
-WebProxy(Merchant)->ISV(ShouQianBa):Return the information
-ISV(ShouQianBa)->Customer:Display member points/grade/special offers
-```
+
+![image](https://raw.githubusercontent.com/WoSai/e-member-doc/master/img/web-proxy-seq-en.png)
+
 ##1.2 Webproxy struture diagram
 ![webproxy](https://raw.githubusercontent.com/Wosai/e-member-doc/master/img/web-proxy.png)
 
