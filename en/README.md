@@ -40,6 +40,10 @@ To help H&M launch service as smoothly and efficiently as possible, Shouqianba w
 
 ![image](https://raw.githubusercontent.com/WoSai/e-member-doc/master/img/seq-en.png)
 
+##1.2 Webproxy struture diagram
+
+![struture](https://raw.githubusercontent.com/Wosai/e-member-doc/master/img/web-proxy.png)
+
 ##2.Signature verification
 In the Internet environment, the ISV must to use HTTPS protocol communication，H&M will provide  application layer signature mechanism. 
 All requests must be signed.
