@@ -69,7 +69,6 @@ All requests must be signed.
 |----|:---|:---|:--:|--------|
 |appid|Unique identity from ISV|varchar(20)|Y||
 |expired|the useful-life of secret|bigint|Y|unit in seconds|
-|sign|MD5 signature|varchar|Y|to chapter 2.2|
 
 
  - example:
@@ -132,7 +131,6 @@ All requests must be signed as instructed below:
 
 |name|meaning|type|required|desc|
 |----|:---|:---|:--:|--------|
-|sign|MD5 signature|varchar(128)|Y|to chapter 2.2|
 |notifyTime|time of notify|timestamp|Y|1468780992|
 |notifyType|type of notify|varchar(10)|Y|active/update|
 |channel|channel|varchar(10)|Y|activate  member must fill in, otherwise not. wechat/alipay|
@@ -156,7 +154,6 @@ All requests must be signed as instructed below:
  
 ```javascript
 {
-    "sign":"MDYCGQCNTJhYa4JghYuksPMsE8jO33sq",
     "notifyTime":"1468780992",
     "notifyType":"active",
     "channel":"wechat",
@@ -198,7 +195,6 @@ SUCCESS
 
 |name|meaning|type|required|desc|
 |----|:---|:---|:--:|--------|
-|sign|MD5 signature|varchar(128)|Y|to chapter 2.2|
 |id|channel identification|varchar(32)|Y|||
 
 
@@ -206,7 +202,6 @@ SUCCESS
  
 ```javascript
 {
-    "sign":"MDYCGQCNTJhYa4JghYuksPMsE8jO33sq",
     "id":"691822b1cab64c879feed51045821ab1"
 }
 ```
