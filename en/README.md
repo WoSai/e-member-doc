@@ -39,7 +39,11 @@ To help H&M launch service as smoothly and efficiently as possible, Wosai will a
  > * Develop a function to query information of member. (to chapter 4)
 
 
-## 1.1 The process of business interaction
+## 1.1 Network Architecture
+
+![struture](https://raw.githubusercontent.com/Wosai/e-member-doc/master/img/struture.png)
+
+## 1.2 The process of business interaction
 
 According to channel Wechat/Alipay membership card activation process, the ISV will activate card by member-activate interface by pre-allocated card code. So, the ISV application will be response for pre-request card code range from H&M CRM System, allocate unique card code to each member after activation.
 
@@ -51,10 +55,6 @@ The Sequence will be designed into two parts,
 - Second part is designed for activation and registeration.
 
 ![image](https://raw.githubusercontent.com/WoSai/e-member-doc/master/img/seq-en-two.png)
-
-## 1.2 Network Architecture
-
-![struture](https://raw.githubusercontent.com/Wosai/e-member-doc/master/img/struture.png)
 
 ## 2.Signature verification
 In the Internet environment, the ISV must to use HTTPS protocol communication，H&M will provide  application layer signature mechanism. 
