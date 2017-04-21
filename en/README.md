@@ -1,22 +1,51 @@
+#1.Introduction
+This document is used to provide membership solution on the specific client H&M. In order to have ISV Shouqianba application work properly with H&M CRM open APIs, please read the following cooperation workflow.
 
-##1.Introduction
-This document is used to illustrate how to connect the E-member system and get data of member.
- > * Step 1: Contact ShouQianBa-Stanley(13917862326) for technical support.
- > * Step 2: The seller must to prepare a secret and use this secret to apply for appid from ShouQianBa. The secret is valid for one month. So seller should develop a function to update the secret. (to chapter 2.1)
- > * Step 3: Develop a function to update the secret. (to chapter 2.1)
- > * Step 4: Develop a function to receive information of member. (to chapter 3)
- > * Step 5: Develop a function to query information of member. (to chapter 4)
+## Step 1 - H&M confirm new features on CRM system.
+
+H&M CRM Team will provide a release deadline for all the new features.
+
+## Step 2 - Qualified ISV Registration for Singature authentication.
+
+Shouqianba will provide required materials as H&M instructed for review. Once approved, Shouqianba will get `appid` and `secret` for using H&M CRM API services with singature. 
+
+Singature authentication secure communications between ISV application and H&M CRM servers. To help client applications refresh the secret, `check-in` service will be required. 
+
+Now, shouqianba team can be ready to develop application.
+
+## Step 3 - ISV Develop and Test Client Application
+
+Once Shouqianba decide on a debugging and testing plan, H&M CRM Team will provide relevant technical support resources to guide Shouqianba team debugging through the development phase.
+
+Shouqinba will also provide test cases to perform a system testing and supervise the whole process in order to confirm the testing quality.
+
+## Step 4 - Release
+
+Once the whole system passed the test process, we will launch it in the production environment. 
+
+Firstly, H&M CRM will release new features, the CRM service side will be ready.
+
+Secondly, ISV Shouqianba will release client application and perform online verifications to make sure all the test cases work properly with H&M CRM open API.
+
+To help H&M launch service as smoothly and efficiently as possible, Shouqianba will also provide on-site support (Mainland China for now)
+
+#Requirements to be confirmed.
+ > * Develop a function to validate the secret. 
+ > * Develop a function to update the secret. (to chapter 2.1)
+ > * Develop a function to receive information of member. (to chapter 3)
+ > * Develop a function to query information of member. (to chapter 4)
 
 
-##1.1 The process of business interaction
+##1.1 The process of Sequence Diagram
 
 ![image](https://raw.githubusercontent.com/WoSai/e-member-doc/master/img/seq-en.png)
 
 ##2.Signature verification
-In the Internet environment, the seller must to use HTTPS protocol communication and should do signature verification about parameter.
+In the Internet environment, the ISV must to use HTTPS protocol communication，H&M will provide  application layer signature mechanism. 
+All requests must be signed.
 
-###2.1 Update secret
-    The seller should provide a secret to ShouQianBa and update the secret periodically. The ShouQianBa can use seller’s function to update the secret. The secret is valid for one month.
+###2.1 Refresh secret
+ The secret is usually valid for one month. Before it's expire time, client appliction will check-in to refresh secret.
  - api url:https://member.hm.com/api/sign/v1
  - request type: post
  - parameters:
@@ -63,10 +92,9 @@ In the Internet environment, the seller must to use HTTPS protocol communication
 ```
 
 ###2.2 How to make a MD5 signature
-    MD5 signature is used to make api calling more secure, using secret and parameters to make a MD5 signature, see the follow steps:
  - Signature introduction:
 
-    All parameters about api calling and QR code generating are used to make a signature, for example parameters include: appid / storied / channel / notifyTime / id, and secret=34719280830192 , appid=2200000001, notifyTime=1468780992, channel=alipay, storeId=5308, id=61028309128301298, the follow these steps to make a signature:
+    All parameters are used to make a signature, for example parameters include: appid / storied / channel / notifyTime / id, and secret=34719280830192 , appid=2200000001, notifyTime=1468780992, channel=alipay, storeId=5308, id=61028309128301298, the follow these steps to make a signature:
 ```
 Step 1: store secret and parameters into an array=['2200000001=appid','1468780992=notifyTime','alipay=channel','61028309128301298=id','5308=storeId','34719280830192=secret'] 
 Step 2: sort this array to get a sortArray=['1468780992=notifyTime','2200000001=appid','34719280830192=secret','5308=storeId','61028309128301298=id','alipay=channel'] 
@@ -74,8 +102,8 @@ Step 3: using '&' to connect all these parameters then get a string source='1468
 Step 4: using MD5 to get a signature, and make the signature combined with capital chars, sign=Upper(MD5(source))
 ```
 
-##3.Send information of membership card
-    Customers get/activate/update their information, E-Member will keep sending this information to seller and the frequency of send information is real-time/2min/10min/1hour/6hours/12hours/24hours until get the response "SUCCESS" from seller.
+##3.Push information of membership card
+    Customers get/activate/update their information, E-Member will keep sending this information to H&M and the frequency is real-time/2min/10min/1hour/6hours/12hours/24hours until it get the response "SUCCESS".
 
  - api url: https://member.hm.com/api/member/notify/v1
  - request type: post
@@ -140,8 +168,8 @@ Step 4: using MD5 to get a signature, and make the signature combined with capit
 SUCCESS
 ```
 
-##4.Get information of membership card according to card identification
-    Customers can get their base information in the page of membership card. And can get all information from this function of seller’s development. The information such as member points, grade, special offers.
+##4.Query membership card according to card identification
+    Customers can get their base information in the page of membership card. And it can also get all information from the H&M CRM Service. The information such as member points, grade, special offers.
 
  - api url: https://member.hm.com/api/member/query/v1
  - request type: post
@@ -225,9 +253,3 @@ SUCCESS
     }
 }
 ```
-
-
-
-
-
-
