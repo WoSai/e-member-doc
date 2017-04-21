@@ -117,7 +117,7 @@ All requests must be signed as instructed below:
 ### 2.3 Request Signature
 
 * Web API uses application layer signature mechanism. The `UTF-8` encoded body (regardless of any formatting) byte stream is used for signature.
-* The client `appid` and signature value should be in the `Authorization` header of HTTP requests. It will be validated by Upay Web API service.
+* The client `appid` and signature value should be in the `Authorization` header of HTTP requests. It will be validated by Web API service.
 * Signature algorithm: `sign = MD5(CONCAT(body + secret))`
 * HTTP header: `Authorization: appid + " " + sign`
 
