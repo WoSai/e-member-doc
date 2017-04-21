@@ -1,4 +1,5 @@
-#1.Introduction
+
+# 1.Introduction
 This document is used to provide membership solution on the specific client H&M. In order to have ISV Wosai application work properly with H&M CRM open APIs, please read the following cooperation workflow.
 
 ## Step 1 - H&M confirm new features on CRM system.
@@ -29,26 +30,26 @@ Secondly, ISV Wosai will release client application and perform online verificat
 
 To help H&M launch service as smoothly and efficiently as possible, Wosai will also provide on-site support (Mainland China for now)
 
-#Requirements to be confirmed.
+# Requirements to be confirmed.
  > * Develop a function to validate the secret. 
  > * Develop a function to update the secret. (to chapter 2.1)
  > * Develop a function to receive information of member. (to chapter 3)
  > * Develop a function to query information of member. (to chapter 4)
 
 
-##1.1 The process of Sequence Diagram
+## 1.1 The process of Sequence Diagram
 
 ![image](https://raw.githubusercontent.com/WoSai/e-member-doc/master/img/seq-en.png)
 
-##1.2 Webproxy struture diagram
+## 1.2 Webproxy struture diagram
 
 ![struture](https://raw.githubusercontent.com/Wosai/e-member-doc/master/img/struture.png)
 
-##2.Signature verification
+## 2.Signature verification
 In the Internet environment, the ISV must to use HTTPS protocol communication，H&M will provide  application layer signature mechanism. 
 All requests must be signed.
 
-###2.1 Refresh secret
+### 2.1 Refresh secret
  The secret is usually valid for one month. Before it's expire time, client appliction will check-in to refresh secret.
  - api url:https://member.hm.com/api/sign/v1
  - request type: post
@@ -95,7 +96,7 @@ All requests must be signed.
 }
 ```
 
-###2.2 How to make a MD5 signature
+### 2.2 How to make a MD5 signature
  - Signature introduction:
 
     All parameters are used to make a signature, for example parameters include: appid / storied / channel / notifyTime / id, and secret=34719280830192 , appid=2200000001, notifyTime=1468780992, channel=alipay, storeId=5308, id=61028309128301298, the follow these steps to make a signature:
@@ -106,7 +107,7 @@ Step 3: using '&' to connect all these parameters then get a string source='1468
 Step 4: using MD5 to get a signature, and make the signature combined with capital chars, sign=Upper(MD5(source))
 ```
 
-##3.Push information of membership card
+## 3.Push information of membership card
     Customers get/activate/update their information, E-Member will keep sending this information to H&M and the frequency is real-time/2min/10min/1hour/6hours/12hours/24hours until it get the response "SUCCESS".
 
  - api url: https://member.hm.com/api/member/notify/v1
@@ -172,7 +173,7 @@ Step 4: using MD5 to get a signature, and make the signature combined with capit
 SUCCESS
 ```
 
-##4.Query membership card according to card identification
+## 4.Query membership card according to card identification
     Customers can get their base information in the page of membership card. And it can also get all information from the H&M CRM Service. The information such as member points, grade, special offers.
 
  - api url: https://member.hm.com/api/member/query/v1
