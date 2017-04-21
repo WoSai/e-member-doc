@@ -34,6 +34,7 @@ To help H&M launch service as smoothly and efficiently as possible, Wosai will a
 # Requirements to be confirmed.
  > * Develop a function to validate the secret. 
  > * Develop a function to update the secret. (to chapter 2.1)
+ > * Develop a function to pre-allocation card code. (to chapter 5)
  > * Develop a function to receive information of member. (to chapter 3)
  > * Develop a function to query information of member. (to chapter 4)
 
@@ -104,7 +105,9 @@ All requests must be signed.
 }
 ```
 
-### 2.2 API Guide
+### 2.2 Request Sigature
+
+ - Refer to Wosai UPay API Guide
 
 Web API domain: `https://member.hm.com`
 
