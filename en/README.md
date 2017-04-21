@@ -100,22 +100,29 @@ All requests must be signed.
     "code":"200",
     "data":{
         "appid":"2200000001",
+        “secret”:”34719280830192”,
         "expired":"86400",
         "sign":"MDYCGQCNTJhYa4JghYuksPMsE8jO33sq"
     }
 }
 ```
 
-### 2.2 How to make a MD5 signature
- - Signature introduction:
+### 2.2 API Guide
 
-    All parameters are used to make a signature, for example parameters include: appid / storied / channel / notifyTime / id, and secret=34719280830192 , appid=2200000001, notifyTime=1468780992, channel=alipay, storeId=5308, id=61028309128301298, the follow these steps to make a signature:
-```
-Step 1: store secret and parameters into an array=['2200000001=appid','1468780992=notifyTime','alipay=channel','61028309128301298=id','5308=storeId','34719280830192=secret'] 
-Step 2: sort this array to get a sortArray=['1468780992=notifyTime','2200000001=appid','34719280830192=secret','5308=storeId','61028309128301298=id','alipay=channel'] 
-Step 3: using '&' to connect all these parameters then get a string source='1468780992=notifyTime&2200000001=appid&34719280830192=secret&5308=storeId&61028309128301298=id&alipay=channel'
-Step 4: using MD5 to get a signature, and make the signature combined with capital chars, sign=Upper(MD5(source))
-```
+Web API domain: `https://api.shouqianba.com`
+
+Web API accepts only JSON formatted HTTP requests. Please make sure to add `Content-Type` header and set its value to `application/json` for all requests.
+
+All requests must be `UTF-8` encoded; all responses are `UTF-8` encoded as well.
+
+All requests must be signed as instructed below: 
+
+### 2.3 Request Signature
+
+* Web API uses application layer signature mechanism. The `UTF-8` encoded body (regardless of any formatting) byte stream is used for signature.
+* The client `appid` and signature value should be in the `Authorization` header of HTTP requests. It will be validated by Upay Web API service.
+* Signature algorithm: `sign = MD5(CONCAT(body + key))`
+* HTTP header: `Authorization: appid + " " + sign`
 
 ## 3.Push information of membership card
     Customers get/activate/update their information, E-Member will keep sending this information to H&M and the frequency is real-time/2min/10min/1hour/6hours/12hours/24hours until it get the response "SUCCESS".
