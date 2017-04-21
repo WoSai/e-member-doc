@@ -77,8 +77,7 @@ All requests must be signed.
 ```javascript
 {
     "appid":"2200000001",
-    "expired":"86400",
-    "sign":"MDYCGQCNTJhYa4JghYuksPMsE8jO33sq"
+    "expired":"86400"
 }
 ```
 
@@ -101,8 +100,7 @@ All requests must be signed.
     "data":{
         "appid":"2200000001",
         “secret”:”34719280830192”,
-        "expired":"86400",
-        "sign":"MDYCGQCNTJhYa4JghYuksPMsE8jO33sq"
+        "expired":"86400"
     }
 }
 ```
@@ -121,7 +119,7 @@ All requests must be signed as instructed below:
 
 * Web API uses application layer signature mechanism. The `UTF-8` encoded body (regardless of any formatting) byte stream is used for signature.
 * The client `appid` and signature value should be in the `Authorization` header of HTTP requests. It will be validated by Upay Web API service.
-* Signature algorithm: `sign = MD5(CONCAT(body + key))`
+* Signature algorithm: `sign = MD5(CONCAT(body + secret))`
 * HTTP header: `Authorization: appid + " " + sign`
 
 ## 3.Push information of membership card
