@@ -109,7 +109,7 @@ All requests must be signed.
 
 ### 2.2 API Guide
 
-Web API domain: `https://api.shouqianba.com`
+Web API domain: `https://member.hm.com`
 
 Web API accepts only JSON formatted HTTP requests. Please make sure to add `Content-Type` header and set its value to `application/json` for all requests.
 
