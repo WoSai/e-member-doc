@@ -275,3 +275,46 @@ SUCCESS
     }
 }
 ```
+
+
+
+## 5.pre-allocated card code
+
+ - api url: https://member.hm.com/api/member/pre
+ - request type: post
+ - parameters format: json
+ - parameters:
+
+|name|meaning|type|required|desc|
+|----|:---|:---|:--:|--------|
+|min|min-range|bigint|Y||
+|max|max-range|bigint|Y||
+
+ - example:
+ 
+```javascript
+{
+    "min":"1000001",
+    "max":"2000000"
+}
+```
+
+ - return parameters:
+
+|name|meaning|type|required|desc|
+|----|:---|:---|:--:|--------|
+|code|response code|varchar(6)|Y|200 success,otherwise exception|
+|message|error message|varchar(6)|N|exist when code is not 200|
+|data|new secret|varchar(32)|N|exist when code is 200|
+
+
+
+ - example:
+ 
+```javascript
+{
+    "code":"200",
+    "message":"SUCCESS",
+    "data":"SUCCESS"
+}
+```
