@@ -280,7 +280,7 @@ SUCCESS
 
 ## 5.pre-allocated card code
 
- - api url: https://member.hm.com/api/member/pre
+ - api url: https://member.hm.com/api/member/pre/v1
  - request type: post
  - parameters format: json
  - parameters:
