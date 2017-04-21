@@ -38,9 +38,18 @@ To help H&M launch service as smoothly and efficiently as possible, Wosai will a
  > * Develop a function to query information of member. (to chapter 4)
 
 
-## 1.1 The process of Sequence Diagram
+## 1.1 The process of business interaction
 
-![image](https://raw.githubusercontent.com/WoSai/e-member-doc/master/img/seq-en.png)
+According to channel Wechat/Alipay membership card activation process, the ISV will activate card by member-activate interface by pre-allocated card code. So, the ISV application will be response for pre-request card code range from H&M CRM System, allocate unique card code to each member after activation.
+
+The Sequence will be designed into two parts,
+- One part is designed for H&M member card pre-allocation.
+
+![image](https://raw.githubusercontent.com/WoSai/e-member-doc/master/img/seq-en-one.png)
+
+- Second part is designed for activation and registeration.
+
+![image](https://raw.githubusercontent.com/WoSai/e-member-doc/master/img/seq-en-two.png)
 
 ## 1.2 Webproxy struture diagram
 
