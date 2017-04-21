@@ -1,5 +1,5 @@
 #1.Introduction
-This document is used to provide membership solution on the specific client H&M. In order to have ISV Shouqianba application work properly with H&M CRM open APIs, please read the following cooperation workflow.
+This document is used to provide membership solution on the specific customer H&M. In order to have ISV Shouqianba application work properly with H&M CRM open APIs, please read the following cooperation workflow.
 
 ## Step 1 - H&M confirm new features on CRM system.
 
