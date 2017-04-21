@@ -1,5 +1,5 @@
 #1.Introduction
-This document is used to provide membership solution on the specific client H&M. In order to have ISV Shouqianba application work properly with H&M CRM open APIs, please read the following cooperation workflow.
+This document is used to provide membership solution on the specific client H&M. In order to have ISV Wosai application work properly with H&M CRM open APIs, please read the following cooperation workflow.
 
 ## Step 1 - H&M confirm new features on CRM system.
 
@@ -7,15 +7,15 @@ H&M CRM Team will provide a release deadline for all the new features.
 
 ## Step 2 - Qualified ISV Registration for Singature authentication.
 
-Shouqianba will provide required materials as H&M instructed for review. Once approved, Shouqianba will get `appid` and `secret` for using H&M CRM API services with singature. 
+Wosai will provide required materials as H&M instructed for review. Once approved, Wosai will get `appid` and `secret` for using H&M CRM API services with singature. 
 
 Singature authentication secure communications between ISV application and H&M CRM servers. To help client applications refresh the secret, `check-in` service will be required. 
 
-Now, shouqianba team can be ready to develop application.
+Now, Wosai team can be ready to develop application.
 
 ## Step 3 - ISV Develop and Test Client Application
 
-Once Shouqianba decide on a debugging and testing plan, H&M CRM Team will provide relevant technical support resources to guide Shouqianba team debugging through the development phase.
+Once Wosai decide on a debugging and testing plan, H&M CRM Team will provide relevant technical support resources to guide Wosai team debugging through the development phase.
 
 Shouqinba will also provide test cases to perform a system testing and supervise the whole process in order to confirm the testing quality.
 
@@ -25,9 +25,9 @@ Once the whole system passed the test process, we will launch it in the producti
 
 Firstly, H&M CRM will release new features, the CRM service side will be ready.
 
-Secondly, ISV Shouqianba will release client application and perform online verifications to make sure all the test cases work properly with H&M CRM open API.
+Secondly, ISV Wosai will release client application and perform online verifications to make sure all the test cases work properly with H&M CRM open API.
 
-To help H&M launch service as smoothly and efficiently as possible, Shouqianba will also provide on-site support (Mainland China for now)
+To help H&M launch service as smoothly and efficiently as possible, Wosai will also provide on-site support (Mainland China for now)
 
 #Requirements to be confirmed.
  > * Develop a function to validate the secret. 
@@ -42,7 +42,7 @@ To help H&M launch service as smoothly and efficiently as possible, Shouqianba w
 
 ##1.2 Webproxy struture diagram
 
-![struture](https://raw.githubusercontent.com/Wosai/e-member-doc/master/img/web-proxy.png)
+![struture](https://raw.githubusercontent.com/Wosai/e-member-doc/master/img/struture.png)
 
 ##2.Signature verification
 In the Internet environment, the ISV must to use HTTPS protocol communication，H&M will provide  application layer signature mechanism. 
