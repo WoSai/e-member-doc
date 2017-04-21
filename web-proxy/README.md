@@ -1,8 +1,3 @@
-﻿# E-Member（web-proxy）
-
-标签（空格分隔）： 未分类
-
----
 
 #1.Introduction
 This document is used to provide membership solution on the specific client H&M. In order to have ISV Shouqianba application work properly with H&M CRM open APIs, please read the following cooperation workflow.
