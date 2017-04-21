@@ -19,7 +19,7 @@ Now, Wosai team can be ready to develop application.
 
 Once Wosai decide on a debugging and testing plan, H&M CRM Team will provide relevant technical support resources to guide Wosai team debugging through the development phase.
 
-Shouqinba will also provide test cases to perform a system testing and supervise the whole process in order to confirm the testing quality.
+Wosai will also provide test cases to perform a system testing and supervise the whole process in order to confirm the testing quality.
 
 ## Step 4 - Release
 
