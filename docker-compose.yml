@@ -1,0 +1,9 @@
+version: '2'
+services:
+  e-member-doc:
+    build: .
+    image: registry.wosai-inc.com/e-member-doc
+    restart: always
+    container_name: e-member-doc
+    volumes:
+      - /usr/share/e-member-doc:/gitbook/_book
